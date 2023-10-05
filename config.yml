@@ -1,6 +1,6 @@
 ---
 default:
-  generator: rdn
+  generator: rrdn # Use rrdn
   feature_extractor: false
   discriminator: false
   training_set: div2k
@@ -78,6 +78,6 @@ training_sets:
     lr_valid_dir: ./data/DIV2K/DIV2K_valid_LR_bicubic/X2
     hr_valid_dir: ./data/DIV2K/DIV2K_valid_HR
     data_name: div2k
-weights_paths:
+weights_paths: # Point to the rrdn weights file
   discriminator:
-  generator:
+  generator: ./weights/rrdn-C4-D3-G32-G032-T10-x4_epoch299.hdf5
